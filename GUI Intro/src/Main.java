@@ -1,4 +1,6 @@
 import java.awt.Point;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -6,7 +8,6 @@ import javax.swing.JLabel;
 
 public class Main 
 {
-
 	public static void main(String[] args) 
 	{
 		JFrame myFrame = new JFrame("My First Frame");//JFrame myFrame = new JFrame();
@@ -21,15 +22,20 @@ public class Main
 		//button1.setLocation(new Point(140,30);
 		//button1.setSize(new Dimension(100,30);
 		
+		button1.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				label1.setText("action listener");
+			}
+		});
 		
 		
 		myFrame.setVisible(true);
 		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		 
-
-		
 	}
+	
 
 }
 																							
